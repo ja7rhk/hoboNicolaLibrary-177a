@@ -164,8 +164,9 @@ void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t cons
 // Function keys with Fn-key pressed.
 static const uint16_t fn_keys[] PROGMEM = {
 	HID_S | WITH_R_CTRL,	FN_SETUP_MODE,
-	HID_R | WITH_R_CTRL,	FN_MEMORY_READ_MODE,
-	HID_W | WITH_R_CTRL,	FN_MEMORY_WRITE_MODE,
+  HID_S | WITH_L_CTRL,  FN_SETUP_MODE,
+//	HID_R | WITH_R_CTRL,	FN_MEMORY_READ_MODE,
+//	HID_W | WITH_R_CTRL,	FN_MEMORY_WRITE_MODE,
 
 	HID_M,        				FN_MEDIA_MUTE,
 	HID_COMMA,						FN_MEDIA_VOL_DOWN,

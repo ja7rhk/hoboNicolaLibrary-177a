@@ -30,11 +30,11 @@
 #include "hobo_nicola.h"
 #include "hobo_board_config.h"
 #include "pio_usb.h"
-/*
-#include <Adafruit_NeoPixel.h>
-#define NUM_PIXELS   1
-Adafruit_NeoPixel pixel(NUM_PIXELS, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
-*/
+
+//#include <Adafruit_NeoPixel.h>
+//#define NUM_PIXELS   1
+//Adafruit_NeoPixel pixel(NUM_PIXELS, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
+
 //static const uint8_t usbh_dp_gpio = 2;
 static const uint8_t usbh_dp_gpio = PIN_USB_HOST_DP;
 Adafruit_USBH_Host USBHost;
@@ -180,9 +180,10 @@ void tuh_hid_report_received_cb(uint8_t dev_addr, uint8_t instance, uint8_t cons
 // Function keys with Fn-key pressed.
 static const uint16_t fn_keys[] PROGMEM = {
 	HID_S | WITH_R_CTRL,	FN_SETUP_MODE,
-	WITH_R_CTRL | HID_1, FN_SELECT_STORED_1,	// Settings1 をアクティブ化
-	WITH_R_CTRL | HID_2, FN_SELECT_STORED_2,
-	WITH_R_CTRL | HID_3, FN_SELECT_STORED_3,
+  HID_S | WITH_L_CTRL,  FN_SETUP_MODE,
+	//WITH_R_CTRL | HID_1, FN_SELECT_STORED_1,	// Settings1 をアクティブ化
+	//WITH_R_CTRL | HID_2, FN_SELECT_STORED_2,
+	//WITH_R_CTRL | HID_3, FN_SELECT_STORED_3,
 	HID_M,        				FN_MEDIA_MUTE,
 	HID_COMMA,						FN_MEDIA_VOL_DOWN,
 	HID_PERIOD,						FN_MEDIA_VOL_UP,
@@ -212,18 +213,18 @@ void setup() {
 	HoboNicola::init_hobo_nicola(&hobo_nicola, "rp_hobo_nicola");
 	delay(100);
 	hobo_nicola.releaseAll();
-/*
+
 	// NeoPixelの電源をONにして初期化
-  pinMode(NEOPIXEL_POWER, OUTPUT);
-  digitalWrite(NEOPIXEL_POWER, HIGH);
-  delay(100);
+  //pinMode(NEOPIXEL_POWER, OUTPUT);
+  //digitalWrite(NEOPIXEL_POWER, HIGH);
+  //delay(100);
  
-  pixel.begin();
-  pixel.setBrightness(50);
-  pixel.setPixelColor(0, pixel.Color(0, 0, 255)); // 起動時は「青」
-  pixel.show();
-  delay(1000);
-*/
+  //pixel.begin();
+  //pixel.setBrightness(50);
+  //pixel.setPixelColor(0, pixel.Color(0, 0, 255)); // 起動時は「青」
+  //pixel.show();
+  //delay(1000);
+
 }
 
 bool suspended = false;
