@@ -11,19 +11,20 @@
 
 ## 想定しているキーボード
 
-富士通製の親指シフトキーボードは現在では入手が難しくなっていますが、NuPhy Nude75 JIS のようにキーマップを自由に変更できるキーボードを利用することで、親指シフト環境を構築できます。
-
+富士通製の親指シフトキーボードは現在では入手が難しくなっていますが、NuPhy Nude75 JIS のようにキーマップを自由に変更できるキーボードを利用することで、親指シフト環境を構築できます。  
 本プロジェクトでは、キーキャップを入れ替えて OASYS 系列の NICOLA-F レイアウト風にした NuPhy Nude75 JIS を対象として動作確認を行っています。
 
 ![](./assets/nuphy_nude75_jis.png)
 
-## Arduinoボード（アダプター用）
+## ● examples / rp_hobo_nicola
 
 以下のRP2040搭載ボードに対応しています。
 
 ### Seeed Studio XIAO RP2040
 
 ![](./assets/110.jpg)
+
+## ● examples / Feather_rp_hobo_nicola
 
 ### Adafruit Feather RP2040 USB Host
 
