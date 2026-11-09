@@ -145,12 +145,12 @@
 	#define READY_LED	0
 #endif
 
-//** koseki (2026.10.16)
+//** koseki (2026.11.7)
 #if defined(ARDUINO_WAVESHARE_RP2040_ZERO)
 // neopixelしか載ってない。常にNeoPixelの電源はオン。
 // neopixelのポートピンは、PIN_NEOPIXELに定義済。
-	#define USE_NEOPIXEL 1
-	#define LED1 0
+	//#define USE_NEOPIXEL 1	// Pico-PIO-USB はNeoPixelと競合するので使えない。
+	#define LED1 PIN_WIRE1_SDA
 	#define LED2 0
 	#define LED_OFF 0
 	#define READY_LED 0
