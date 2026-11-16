@@ -304,6 +304,16 @@ void HoboNicola::set_nid_table(bool us) {
 	}
 }
 
+//** koseki (2026.11.16)
+uint16_t make_hid_to_nid(uint8_t k) {
+ 		for(uint8_t i = 0; i < nicola_key_count	; i++) {
+			if (hid_to_nid[i] == k)
+				return MKWORD(k, (i + 1));
+		}
+		return 0;
+}
+//** koseki (2026.11.16)
+
 uint16_t HoboNicola::get_nid(uint8_t& k) {
 	uint16_t m = 0;
 	switch(k) {
@@ -311,12 +321,16 @@ uint16_t HoboNicola::get_nid(uint8_t& k) {
 		//** koseki (2026.10.21)
 		if (!_NICOLA_F_LAYOUT(global_setting))
 			k =  HID_BACKSP;
+		else
+			m = make_hid_to_nid(HID_J_COLON);
 		//** koseki (2026.10.21)
 		break;
 	case HID_J_RBR_32:	       // C12 [ は取消キーに
 		//** koseki (2026.10.21)
 		if (!_NICOLA_F_LAYOUT(global_setting))
 			k = HID_ESCAPE;
+		else
+			m = make_hid_to_nid(HID_J_RBR_32);
 		//** koseki (2026.10.21)
 		break;
 	case HID_SPACE:
