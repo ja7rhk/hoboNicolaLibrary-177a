@@ -21,13 +21,14 @@
 以下のRP2040搭載ボードに対応しています。
 
 ### Seeed Studio XIAO RP2040
-
 ![](./assets/110.jpg)
+
+### Sharewave RP2040 Zero
+![](./assets/050.jpg)
 
 ## ● examples / Feather_rp_hobo_nicola
 
 ### Adafruit Feather RP2040 USB Host
-
 ![](./assets/103.jpg)
 
 ## ビルド

@@ -139,8 +139,8 @@ static const uint8_t* const output_single_long[] PROGMEM = {
 //	NICOLA-F用
 static const uint8_t* const output_single_nicola_F[] PROGMEM = {	// 単独打鍵
 //1          2        3       4         5         6         7         8         9         10         11           12         13           14
-	s_1,     s_2,     s_3,    s_4,      s_5,      s_6,      s_7,      s_8,      s_9,      s_0,       s_minus,     s_carret,  s_bslas,     s_nul,
-	s_peri,  s_ka,    s_ta,   s_ko,     s_sa,     s_ra,     s_ti,     s_ku,     s_tu,     s_comm,    s_comm,      s_nul,
+	s_1,     s_2,     s_3,    s_4,      s_5,      s_6,      s_7,      s_8,      s_9,      s_0,       s_minus,     s_carret,  s_bslas,     s_r_brac,
+	s_peri,  s_ka,    s_ta,   s_ko,     s_sa,     s_ra,     s_ti,     s_ku,     s_tu,     s_comm,    s_comm,      s_l_brac,
 	s_u,     s_si,    s_te,   s_ke,     s_se,     s_ha,     s_to,     s_ki,     s_i,      s_nn,      s_at,
 	s_peri,  s_hi,    s_su,   s_fu,     s_he,     s_me,     s_so,     s_ne,     s_ho,     s_slash,   s_uline
 };
@@ -148,16 +148,16 @@ static const uint8_t* const output_single_nicola_F[] PROGMEM = {	// 単独打鍵
 //
 static const uint8_t* const output_left_nicola_F[] PROGMEM = {		// 左親指同時
 //1          2        3       4         5         6         7         8         9         10         11           12         13           14
-	s_quest, s_slash, s_tild, s_l_brac, s_r_brac, s_l_brac, s_r_brac, s_l_pren, s_r_pren, s_l_cbrac, s_r_cbrac,   s_nul,     s_nul,       s_nul,
-	s_xa, 	 s_e,     s_ri,   s_xya,    s_re,     s_pa,     s_di,     s_gu,     s_du,     s_pi,      s_nul,       s_nul,
+	s_quest, s_slash, s_tild, s_l_brac, s_r_brac, s_l_brac, s_r_brac, s_l_pren, s_r_pren, s_l_cbrac, s_r_cbrac,   s_nul,     s_nul,       s_r_cbrac,
+	s_xa, 	 s_e,     s_ri,   s_xya,    s_re,     s_pa,     s_di,     s_gu,     s_du,     s_pi,      s_nul,       s_l_cbrac,
 	s_wo,    s_a,     s_na,   s_xyu,    s_mo,     s_ba,     s_do,     s_gi,     s_po,     s_nul,     s_nul,
 	s_xu,    s_minus, s_ro,   s_ya,     s_xi,     s_pu,     s_zo,     s_pe,     s_bo,     s_nul,     s_nul
 };
 
 static const uint8_t* const output_right_nicola_F[] PROGMEM = {		// 右親指同時
 //1          2        3       4         5         6         7         8         9         10         11           12         13           14
-	s_quest, s_slash, s_tild, s_l_brac, s_r_brac, s_l_brac, s_r_brac, s_l_pren, s_r_pren, s_l_cbrac, s_r_cbrac,   s_nul,     s_nul,       s_nul,
-	s_nul,   s_ga,    s_da,   s_go,     s_za,     s_yo,     s_ni,     s_ru,     s_ma,     s_xe,      s_aste,      s_nul,
+	s_quest, s_slash, s_tild, s_l_brac, s_r_brac, s_l_brac, s_r_brac, s_l_pren, s_r_pren, s_l_cbrac, s_r_cbrac,   s_nul,     s_nul,       s_r_cbrac,
+	s_nul,   s_ga,    s_da,   s_go,     s_za,     s_yo,     s_ni,     s_ru,     s_ma,     s_xe,      s_aste,      s_l_cbrac,
 	s_vu,    s_ji,    s_de,   s_ge,     s_ze,     s_mi,     s_o,      s_no,     s_xyo,    s_xtu,     s_nul,
 	s_nul,   s_bi,    s_zu,   s_bu,     s_be,     s_nu,     s_yu,     s_mu,     s_wa,     s_xo,      s_nul
 };
